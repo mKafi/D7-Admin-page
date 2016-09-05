@@ -1,0 +1,6 @@
+name = Kaktarua
+description = No description
+core = 7.x
+package = zZZ
+;scripts[] = js/utpadok.js/utpadok
+;stylesheets[all][] = css/utpadok.css

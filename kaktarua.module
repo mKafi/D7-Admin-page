@@ -1,0 +1,34 @@
+<?php 
+
+function kaktarua_menu(){
+	$items = array();
+	/*
+	$items['admin/kaktarua'] = array(
+		'title'=>t('Kaktarua'),
+		'description' => t('Enter menu links and title to list'),		
+		'page callback' => 'kaktarua',		
+		'access arguments' => array('access content'),
+		'access callback' => 1,
+		'file'=>'inc/kaktarua.inc',
+		'type'=>MENU_NORMAL_ITEM,
+		'weight' => 25
+	);
+	
+
+	return $items;
+	*/
+}
+
+/*
+function purolator_admin_settings(){
+	return 'tetttt'; 
+}
+
+function test_page_callback(){
+	return '<h1>Test page</h1>';
+}
+
+function example_feed(){
+	return 'test page'; 
+}
+*/
