@@ -1,5 +1,6 @@
 <?php 
 
+
 function kaktarua_menu(){
 	$items = array();
 	
@@ -17,19 +18,12 @@ function kaktarua_menu(){
 	$items['admin/kaktarua'] = array(
 		'title'=>t('Kaktarua'),
 		'description' => t('Enter menu links and title to list'),		
-		'page callback' => 'testpage',		
+		'page callback' => 'kaktarua',		
 		'access arguments' => array('access content'),
 		'type' => MENU_NORMAL_ITEM,
+		'file'=>'inc/kaktarua.inc',
 		'weight' => 25
 	);
 
-
-
-
 	return $items;
-}
-
-
-function testpage(){
-	return 'EEE';
 }
