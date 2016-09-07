@@ -133,13 +133,17 @@ function get_admin_page_settings_form_submit(&$form, &$form_state){
 	$code = ''; 
 
 	$code .= '
-		$items[\''.$fv['admin_link'].'\'] = array(<br/>
-			&nbsp;&nbsp;\'title\'=>t(\''.$fv['admin_page_title'].'\'),<br/>
-			&nbsp;&nbsp;\'description\' => t(\''.$fv['admin_page_description'].'\'),<br/>
-			&nbsp;&nbsp;\'page callback\' => \''.$fv['menu_callback_fn'].'\',<br/>
-			&nbsp;&nbsp;\'access arguments\' => array(\''.$fv['access_arguments'].'\'),<br/>			
-			&nbsp;&nbsp;\'type\'=>'.$fv['menu_type'].'<br/>
-		);
+		function '.$fv['hook_title'].'_menu(){<br/>
+		&nbsp;&nbsp; $items[\''.trim($fv['admin_link']).'\'] = array(<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;\'title\'=>t(\''.trim($fv['admin_page_title']).'\'),<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;\'description\' => t(\''.trim($fv['admin_page_description']).'\'),<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;\'page callback\' => \''.trim($fv['menu_callback_fn']).'\',<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;\'access arguments\' => array(\''.trim($fv['access_arguments']).'\'),<br/>			
+			&nbsp;&nbsp;&nbsp;&nbsp;\'type\'=>'.trim($fv['menu_type']).'<br/>
+		&nbsp;&nbsp; ); <br/>
+		
+		&nbsp;&nbsp; return $items; <br/>
+		}
 	<br/>';
 
 	$code .= '<br/>
